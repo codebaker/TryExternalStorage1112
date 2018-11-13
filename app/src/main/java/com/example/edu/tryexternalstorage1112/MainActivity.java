@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ((Button) findViewById(R.id.buttonWrite)).setOnClickListener(this);
         ((Button) findViewById(R.id.buttonReadPublic)).setOnClickListener(this);
         ((Button) findViewById(R.id.buttonWritePublic)).setOnClickListener(this);
+
         int permission = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (permission != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE);
         }
-
     }
 
     @Override
